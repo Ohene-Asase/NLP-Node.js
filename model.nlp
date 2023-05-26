@@ -1,0 +1,619 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "goodby": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bitter,mouth": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "headach": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "and,cough,sore,throat": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "ach,and,bodi,fever": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "breath,of,short": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "abdomin,and,diarrhea,pain": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "and,joint,pain,swell": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "and,fatigu,weak": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default",
+          "greetings.hello": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "Mouth Bitter",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Headache",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Cough and Sore Throat",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Fever and Body Aches",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Shortness of Breath",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Abdominal Pain and Diarrhea",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Joint Pain and Swelling",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Fatigue and Weakness",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "greetings.hello"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "goodby": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "for": 1,
+              "now": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "mouth": 1,
+              "bitter": 1,
+              "headach": 1,
+              "cough": 1,
+              "and": 1,
+              "sore": 1,
+              "throat": 1,
+              "fever": 1,
+              "bodi": 1,
+              "ach": 1,
+              "short": 1,
+              "of": 1,
+              "breath": 1,
+              "abdomin": 1,
+              "pain": 1,
+              "diarrhea": 1,
+              "joint": 1,
+              "swell": 1,
+              "fatigu": 1,
+              "weak": 1,
+              "hello": 1
+            },
+            "intents": {
+              "greetings.bye": 1,
+              "greetings.hello": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "goodby": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "for": 1,
+                "now": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1
+              },
+              "greetings.hello": {
+                "mouth": 1,
+                "bitter": 1,
+                "headach": 1,
+                "cough": 1,
+                "and": 1,
+                "sore": 1,
+                "throat": 1,
+                "fever": 1,
+                "bodi": 1,
+                "ach": 1,
+                "short": 1,
+                "of": 1,
+                "breath": 1,
+                "abdomin": 1,
+                "pain": 1,
+                "diarrhea": 1,
+                "joint": 1,
+                "swell": 1,
+                "fatigu": 1,
+                "weak": 1,
+                "hello": 1
+              }
+            },
+            "featuresToIntent": {
+              "goodby": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "mouth": [
+                "greetings.hello"
+              ],
+              "bitter": [
+                "greetings.hello"
+              ],
+              "headach": [
+                "greetings.hello"
+              ],
+              "cough": [
+                "greetings.hello"
+              ],
+              "and": [
+                "greetings.hello"
+              ],
+              "sore": [
+                "greetings.hello"
+              ],
+              "throat": [
+                "greetings.hello"
+              ],
+              "fever": [
+                "greetings.hello"
+              ],
+              "bodi": [
+                "greetings.hello"
+              ],
+              "ach": [
+                "greetings.hello"
+              ],
+              "short": [
+                "greetings.hello"
+              ],
+              "of": [
+                "greetings.hello"
+              ],
+              "breath": [
+                "greetings.hello"
+              ],
+              "abdomin": [
+                "greetings.hello"
+              ],
+              "pain": [
+                "greetings.hello"
+              ],
+              "diarrhea": [
+                "greetings.hello"
+              ],
+              "joint": [
+                "greetings.hello"
+              ],
+              "swell": [
+                "greetings.hello"
+              ],
+              "fatigu": [
+                "greetings.hello"
+              ],
+              "weak": [
+                "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "goodby",
+                "bye",
+                "take",
+                "care",
+                "see",
+                "you",
+                "later",
+                "for",
+                "now",
+                "i",
+                "must",
+                "go",
+                "mouth",
+                "bitter",
+                "headach",
+                "cough",
+                "and",
+                "sore",
+                "throat",
+                "fever",
+                "bodi",
+                "ach",
+                "short",
+                "of",
+                "breath",
+                "abdomin",
+                "pain",
+                "diarrhea",
+                "joint",
+                "swell",
+                "fatigu",
+                "weak",
+                "hello"
+              ],
+              "intents": [
+                "greetings.bye",
+                "greetings.hello"
+              ],
+              "perceptrons": [
+                [
+                  9.975560188293457,
+                  5.123237609863281,
+                  2.5616283416748047,
+                  2.5616283416748047,
+                  3.4153547286987305,
+                  3.4153547286987305,
+                  3.4153547286987305,
+                  2.5615193843841553,
+                  2.5615193843841553,
+                  3.4153153896331787,
+                  3.4153153896331787,
+                  3.4153153896331787,
+                  -2.020258665084839,
+                  -2.020258665084839,
+                  -3.9162821769714355,
+                  -0.5685625672340393,
+                  -2.7087020874023438,
+                  -0.5685625672340393,
+                  -0.5685625672340393,
+                  -0.5248833894729614,
+                  -0.5248833894729614,
+                  -0.5248833894729614,
+                  -1.3446401357650757,
+                  -1.3446401357650757,
+                  -1.3446401357650757,
+                  -0.40159720182418823,
+                  -0.8077978491783142,
+                  -0.40159720182418823,
+                  -0.35682153701782227,
+                  -0.35682153701782227,
+                  -0.6618020534515381,
+                  -0.6618020534515381,
+                  -3.887340784072876,
+                  4.026722921910305
+                ],
+                [
+                  -6.228290557861328,
+                  -3.233976364135742,
+                  -1.6172858476638794,
+                  -1.6172858476638794,
+                  -2.155369997024536,
+                  -2.155369997024536,
+                  -2.155369997024536,
+                  -1.6162910461425781,
+                  -1.6162910461425781,
+                  -2.1551411151885986,
+                  -2.1551411151885986,
+                  -2.1551411151885986,
+                  3.914344310760498,
+                  3.914344310760498,
+                  7.68750524520874,
+                  0.9761996269226074,
+                  4.882228851318359,
+                  0.9761996269226074,
+                  0.9761996269226074,
+                  0.9762753844261169,
+                  0.9762753844261169,
+                  0.9762753844261169,
+                  2.6045281887054443,
+                  2.6045281887054443,
+                  2.6045281887054443,
+                  0.7321744561195374,
+                  1.4644955396652222,
+                  0.7321744561195374,
+                  0.7323822975158691,
+                  0.7323822975158691,
+                  1.465578317642212,
+                  1.465578317642212,
+                  7.646961688995361,
+                  6.481767561585681
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye take care"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "Mouth Bitter"
+      ],
+      [
+        "en",
+        "Headache"
+      ],
+      [
+        "en",
+        "Cough and Sore Throat"
+      ],
+      [
+        "en",
+        "Fever and Body Aches"
+      ],
+      [
+        "en",
+        "Shortness of Breath"
+      ],
+      [
+        "en",
+        "Abdominal Pain and Diarrhea"
+      ],
+      [
+        "en",
+        "Joint Pain and Swelling"
+      ],
+      [
+        "en",
+        "Fatigue and Weakness"
+      ],
+      [
+        "en",
+        "Hello"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings.bye": [
+          {
+            "answer": "see you soon!"
+          },
+          {
+            "answer": "Till next time"
+          },
+          {
+            "answer": "bye bye"
+          },
+          {
+            "answer": "have a great day"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "You might have Malaria"
+          },
+          {
+            "answer": "It could be due to stress or a tension headache"
+          },
+          {
+            "answer": "You may be suffering from a common cold or flu"
+          },
+          {
+            "answer": "It could be a sign of influenza or dengue fever"
+          },
+          {
+            "answer": "It could indicate a respiratory infection or asthma"
+          },
+          {
+            "answer": "You may have food poisoning or a stomach virus"
+          },
+          {
+            "answer": "It could be a symptom of arthritis or rheumatoid arthritis"
+          },
+          {
+            "answer": "It may be due to lack of sleep or anemia"
+          },
+          {
+            "answer": "Hi, How may I help you"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

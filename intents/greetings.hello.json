@@ -1,0 +1,26 @@
+{
+   
+    "questions": [
+        "Mouth Bitter",
+        "Headache",
+        "Cough and Sore Throat",
+        "Fever and Body Aches",
+        "Shortness of Breath",
+        "Abdominal Pain and Diarrhea",
+        "Joint Pain and Swelling",
+        "Fatigue and Weakness",
+        "Hello"
+
+    ],
+    "answers": [
+        "You might have Malaria",
+        "It could be due to stress or a tension headache",
+        "You may be suffering from a common cold or flu",
+        "It could be a sign of influenza or dengue fever",
+        "It could indicate a respiratory infection or asthma",
+        "You may have food poisoning or a stomach virus",
+        "It could be a symptom of arthritis or rheumatoid arthritis",
+        "It may be due to lack of sleep or anemia",
+        "Hi, How may I help you"
+    ]
+}
